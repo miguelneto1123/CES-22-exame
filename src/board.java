@@ -8,9 +8,9 @@ public class board {
             for(int column=0 ; column < 7 ; column++ )
                 board[row][column]=-1;
     }
-	
-	public static void showBoard(int[][] board){
-        System.out.println("\t1 \t2 \t3 \t4 \t5");
+    
+    public void showBoard(int[][] board){
+        System.out.println("\t1 \t2 \t3 \t4 \t5 \t6 \t7");
         System.out.println();
         
         for(int row=0 ; row < 7 ; row++ ){
@@ -29,5 +29,5 @@ public class board {
         }
 
     }
-
+	
 }
