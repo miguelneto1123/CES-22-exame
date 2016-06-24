@@ -21,13 +21,14 @@ public class battleShip {
 	            Shoots1.getshoot(Shoots1.shoot);
 	            attempts1++;
 	            
-	            if(hit(Shoots1.shoot,Ships2.ships)){
+	            boolean wasHit = hit(Shoots1.shoot,Ships2.ships,Board2.board); 
+	            if(wasHit){
 	                shotHit1++;
 	            } else {
 	            	System.out.println("Missed...");
 	            }
 	            
-	            changeboard(Shoots1.shoot,Ships2.ships,Board2.board);
+	            changeboard(Shoots1.shoot,Board2.board, wasHit);
         	}
         	else {
         		System.out.println("Player2's turn");
@@ -35,13 +36,14 @@ public class battleShip {
 	            Shoots2.getshoot(Shoots2.shoot);
 	            attempts2++;
 	            
-	            if(hit(Shoots2.shoot,Ships1.ships)){
+	            boolean wasHit = hit(Shoots2.shoot,Ships1.ships,Board1.board); 
+	            if(wasHit){
 	                shotHit2++;
             	} else {
             		System.out.println("Missed...");
             	}
 	            
-	            changeboard(Shoots2.shoot,Ships1.ships,Board1.board);
+	            changeboard(Shoots2.shoot,Board1.board, wasHit);
         	}
         	turn++;
         }while(shotHit1!=9 && shotHit2 != 9);
@@ -56,10 +58,14 @@ public class battleShip {
         }
     }
     
-    public static boolean hit(int[] shoot, int[][] ships){
+    public static boolean hit(int[] shoot, int[][] ships, int board[][]){
         
         for (int ship = 0; ship<ships.length; ship++){
             if(shoot[0] == ships[ship][0] && shoot[1] == ships[ship][1]){
+            	if (board[shoot[0]][shoot[1]] == 1) {
+            		System.out.println("You already shot a ship here...");
+            		return false;
+            	}
                 System.out.printf("You hit a ship located in (%d,%d)\n",shoot[0]+1,shoot[1]+1);
                 return true;
             }
@@ -82,8 +88,8 @@ public class battleShip {
                                  "Column %d -> %d ships\n",attempt,shoot[0]+1,row,shoot[1]+1,column);
     }
 
-    public static void changeboard(int[] shoot, int[][] ships, int[][] board){
-        if(hit(shoot,ships))
+    public static void changeboard(int[] shoot, int[][] board, boolean wasHit){
+        if(wasHit)
             board[shoot[0]][shoot[1]]=1;
         else
             board[shoot[0]][shoot[1]]=0;
