@@ -12,7 +12,7 @@ public class shoot {
         	System.out.print("Linha: ");
         	shoot[0] = input.nextInt();
         	if(shoot[0] < 1 || shoot[0] > 7) {
-        		System.out.println("Digite um número de 1 a 7");
+        		System.out.println("Digite um nï¿½mero de 1 a 7");
         	}
         	shoot[0]--;}while(shoot[0] < 0 || shoot[0] > 6);
         
@@ -20,7 +20,7 @@ public class shoot {
         	System.out.print("Coluna: ");
         	shoot[1] = input.nextInt();
         	if(shoot[1] < 1 || shoot[1] > 7) {
-        		System.out.println("Digite um número de 1 a 7");
+        		System.out.println("Digite um nï¿½mero de 1 a 7");
         	}
         	shoot[1]--;}while(shoot[1] < 0 || shoot[1] > 6);
         
