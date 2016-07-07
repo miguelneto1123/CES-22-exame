@@ -13,7 +13,7 @@ public class battleShip {
 	static final String HTML_END = "</body>" + "</html>";
     
 	public static void main(String[] args) {
-		int port = 8000;
+		/*int port = 8000;
 		battleShip b = new battleShip();
 		
 		try {
@@ -36,7 +36,7 @@ public class battleShip {
 		//synchronized (b) {
 			threads[0].start();
 			threads[1].start();
-		//}
+		//}*/
 		
         board Board1 = new board(), Board2 = new board();
         ships Ships1 = new ships(), Ships2 = new ships();
@@ -48,27 +48,15 @@ public class battleShip {
             shotHit2 = 0,
             turn = 1;
         
-        if(threads[0].is != null){
-        	System.out.println("threads[0].is");
-        }
-        if(threads[1].is == null){
-        	System.out.println("threads[1].is");
-        }
-        if(threads[0].os == null){
-        	System.out.println("threads[0].os");
-        }
-        if(threads[1].os == null){
-        	System.out.println("threads[1].os");
-        }
-        
-        BufferedReader inFromP1 = new BufferedReader(new InputStreamReader(threads[0].is)),
+        /*BufferedReader inFromP1 = new BufferedReader(new InputStreamReader(threads[0].is)),
         		inFromP2 = new BufferedReader(new InputStreamReader(threads[1].is));
         DataOutputStream outToP1 = new DataOutputStream(threads[0].os),
-        		outToP2 = new DataOutputStream(threads[1].os);
+        		outToP2 = new DataOutputStream(threads[1].os);*/
         
         
         do{
         	if (turn % 2 == 1){
+        		System.out.println("Player1's turn");
 	            Board2.showBoard(Board2.board);
 	            Shoots1.getshoot(Shoots1.shoot);
 	            attempts1++;
