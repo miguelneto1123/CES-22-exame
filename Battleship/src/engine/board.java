@@ -1,7 +1,8 @@
+package engine;
 
 public class board {
 	
-	int [][] board = new int[7][7];
+	public int [][] board = new int[7][7];
 	
 	public board(){
         for(int row=0 ; row < 7 ; row++ )

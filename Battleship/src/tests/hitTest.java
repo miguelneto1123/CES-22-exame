@@ -1,6 +1,10 @@
+package tests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import engine.ships;
+import engine.shoot;
 
 public class hitTest {
 

@@ -1,8 +1,9 @@
+package engine;
 import java.util.Scanner;
 
 public class shoot {
 	
-	int[] shoot = new int[2];
+	public int[] shoot = new int[2];
 	
 	@SuppressWarnings("resource")
 	public void getshoot(int[] shoot){
