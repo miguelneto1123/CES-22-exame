@@ -1,10 +1,10 @@
 package engine;
 
-public class board {
+public class Gameboard {
 	
 	public int [][] board = new int[7][7];
 	
-	public board(){
+	public Gameboard(){
         for(int row=0 ; row < 7 ; row++ )
             for(int column=0 ; column < 7 ; column++ )
                 board[row][column]=-1;

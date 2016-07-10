@@ -1,11 +1,11 @@
 package engine;
 import java.util.Random;
 
-public class ships {
+public class Ships {
 	
 	public int[][] ships = new int[9][2];
 	
-	public ships(){
+	public Ships(){
         Random random = new Random();
         
         for (int ship = 0; ship < 9; ship++){

@@ -1,15 +1,12 @@
 package engine;
-import java.io.*;
-import java.net.*;
-import java.util.StringTokenizer;
 
 
-public class battleShip {
+public class BattleShip {
     
 	public static void main(String[] args) {
-        board Board1 = new board(), Board2 = new board();
-        ships Ships1 = new ships(), Ships2 = new ships();
-        shoot Shoots1 = new shoot(), Shoots2 = new shoot();
+        Gameboard Board1 = new Gameboard(), Board2 = new Gameboard();
+        Ships Ships1 = new Ships(), Ships2 = new Ships();
+        Shoot Shoots1 = new Shoot(), Shoots2 = new Shoot();
         
         int attempts1 = 0,
             shotHit1 = 0,

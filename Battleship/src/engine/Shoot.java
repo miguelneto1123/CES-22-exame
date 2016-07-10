@@ -1,7 +1,7 @@
 package engine;
 import java.util.Scanner;
 
-public class shoot {
+public class Shoot {
 	
 	public int[] shoot = new int[2];
 	
